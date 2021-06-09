@@ -1,4 +1,4 @@
-# Pomodoro todolist
+# Todolist
 
 - Codiscovery
 - Live (mercredi 19h-21h) proposé par vous
