@@ -1,0 +1,139 @@
+:root {
+  --font-body: "Nunito sans";
+  --color-body: #31344b;
+  --color-bg: #e6e7ee;
+  --color-shadow: #b8b9be;
+  --color-i-shadow: #fff;
+  --color-border: #d1d9e6;
+  --border-radius: 8px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body), sans-serif;
+  color: var(--color-body);
+  background-color: var(--color-bg);
+  font-weight: 200;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+}
+
+ul,
+li,
+button {
+  all: unset;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+ul .instructions {
+  display: none;
+}
+
+ul.empty .instructions {
+  display: block;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 0;
+  align-items: center;
+  cursor: pointer;
+
+  border: 1px var(--color-border) solid;
+  border-radius: var(--border-radius);
+
+  box-shadow: 3px 3px 6px var(--color-shadow),
+    -3px -3px 6px var(--color-i-shadow);
+}
+
+li span.content {
+  padding: 8px;
+}
+
+li.done {
+  color: var(--color-shadow);
+  box-shadow: 3px 3px 6px var(--color-shadow) inset,
+    -3px -3px 6px var(--color-i-shadow) inset;
+}
+
+li button {
+  margin-left: 1em;
+  margin-right: 1em;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: var(--border-radius);
+}
+li button:hover {
+  background-color: var(--color-body);
+  color: var(--color-bg);
+  transition: all 0.2s ease-in-out;
+}
+li span.material-icons {
+  font-size: 1em;
+}
+
+.form-control {
+  display: flex;
+  margin-top: 2em;
+}
+.form-control input {
+  flex-grow: 1;
+  border: 1px var(--color-border) solid;
+  border-right-width: 0;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  font-family: var(--font-body), sans-serif;
+  color: var(--color-body);
+  background-color: var(--color-bg);
+  padding: 5px 8px;
+  font-size: 1.1em;
+  box-shadow: 3px 3px 6px var(--color-shadow) inset;
+}
+.form-control input:focus {
+  outline: 0;
+}
+.form-control button {
+  cursor: pointer;
+  border: 1px var(--color-border) solid;
+  border-left-width: 0;
+  padding: 5px 8px;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+
+  box-shadow: 1px 1px 5px var(--color-i-shadow) inset,
+    -1px -1px 5px var(--color-shadow) inset;
+
+  transition: all 0.3s ease-in-out;
+}
+.form-control button:hover {
+  box-shadow: 3px 3px 6px var(--color-shadow) inset,
+    -3px -3px 6px var(--color-i-shadow) inset;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.empty {
+  border-radius: var(--border-radius);
+  width: 50vw;
+  padding: 2em;
+  box-shadow: 3px 3px 6px var(--color-shadow) inset,
+    -3px -3px 6px var(--color-i-shadow) inset;
+}
+
+.instructions {
+  font-weight: 700;
+  color: var(--color-shadow);
+  text-align: center;
+}
